@@ -1,0 +1,22 @@
+// import mixins / reset / compass modules die je gebruikt
+@import 'mixins';
+@import 'compass/reset';
+@import 'compass/css3';
+
+
+
+// vars
+// wat-naam bv. $font-title, $color-background,...
+
+$background-color: #F5F4F4;
+$darkblue: #5c6983;
+$green: #c1d3c8;
+$lightblue: #89d7ed;
+
+// @font-face via compass
+
+
+@include border-box-default;
+
+// border-box default mixin
+
