@@ -2,30 +2,14 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>10der</title>
+	<title>Whiteboard</title>
 	<link rel="stylesheet" href="css/screen.css">
 </head>
 <body>
 
 	<header>
     <nav>
-      <div>
-      <?php if(empty($_SESSION['user'])){ ?>
-        <form action="index.php?page=login" method="post">
-            <input type="email" name="email" placeholder="email" class="form-control" />
-                <input type="password" name="password" placeholder="password" class="form-control" />
-                <input type="submit" value="Login" class="btn btn-default" />
-        </form>
-        <a href="index.php?page=register">Register</a>
-      	<?php } ?>
 
-	      <ul>
-	          <?php if(!empty($_SESSION['user'])){ ?>
-	          <li>Signed in as <?php echo $_SESSION['user']['username'];?></li>
-	          <li><a href="index.php?page=logout" class="navbar-link">Logout</a></li>
-	          <?php } ?>
-	      </ul>
-    	</div>
     </nav>
   </header>
 		<div class="container">
