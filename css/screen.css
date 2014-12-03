@@ -6,7 +6,7 @@
 body {
 	background-color: #fdfaf4;
 	width: 100%;
-	height: 720px;
+	height: 740px;
 	border: 10px solid #cf486c;
 	font-size: 62.5%;
 }
@@ -36,13 +36,28 @@ body {
 
 }
 
-#home {
+footer h3 {
+	font-family: 'bebas_neueregular';
+	color: #cf486c;
+	float: right;
+	margin-right: 100px;
+	margin-top: -40px;
+	font-size: 3.4em;
+}
+
+label {
+	color: white;
+	font-family: 'bebas_neueregular';
+	font-size: 3.8em;
+}
+
+.home {
 	width: 550px;
 	height: 550px;
 	margin: 100px auto;
 }
 
-h1 {
+.home h1 {
 	font-family: 'bebas_neueregular';
 	color: #414f5c;
 	font-size: 6em;
@@ -51,7 +66,7 @@ h1 {
 	border-radius: 10px;
 } 
 
-#login {
+.login {
 	width: 500px;
 	height: 390px;
 	color: white;
@@ -60,34 +75,242 @@ h1 {
 	margin: 40px auto;
 }
 
-#login h2 {
+.login h2 {
 	font-family: 'youngbeautifulregularregular';
 	font-size: 4.2em;
 	text-align: center;
 	padding-top: 40px;
 }
-#login form {
+
+.login form {
 	padding-left: 50px;
 }
 
-#login label {
+.login label {
 	font-size: 3.5em;
+	margin-top: 20px;
 	font-family: 'youngbeautifulregularregular';
 	display: block;
 }
-#login input {
+
+.login input {
 	width: 375px;
 	height: 30px;
+	padding-left: 10px; 
 	border-radius: 5px;
+	border: none;
 }
 
 #loginButton {
-	margin-top: 20px;
 	padding-bottom: 40px;
 	font-size: 3.4em;
+	border: none;
 	font-family: 'bebas_neueregular';
 	color: #414f5c;
 	background-color: white;
+	margin: 20px auto;
+}
+
+#loginButton:hover {
+	background-color: #414f5c;
+	color: white;
+	border: none;
+}
+
+.login a {
+	color: white;
+	margin-top: 20px;
+	font-family: 'bebas_neueregular';
+	font-size: 2.5em;
+	text-align: center;
+	display: block;
+}
+
+.login a:hover {
+	color: #414f5c;;
+}
+
+#register {
+	width: 800px;
+	height: 450px;
+	margin-left: -120px;
+}
+
+#register input {
+	width: 300px;
+
+} 
+
+#register ul li {
+	float: left;
+	display: block;
+	margin-right: 30px;
+
+}
+
+
+/* ----------------- NEW PROJECT ----------------- */
+
+#newProject {
+	width: 810px;
+	height: 400px;
+	margin: 200px auto;
+	background-image: url("../images/newProject.png");
+	background-repeat: no-repeat;
+}
+
+#new h1 {
+	color: white;
+	font-family: 'bebas_neueregular';
+	font-size: 5.8em;
+	background-color: #cf486c;
+	width: 300px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-left: 30px;
+	border-radius: 10px;
+}
+
+#newProjectForm {
+	margin-top: 50px;
+}
+
+#newProjectForm label {
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-left: 30px;
+}
+
+#newProjectForm input {
+	width: 375px;
+	height: 40px;
+	padding-left: 10px; 
+	border-radius: 5px;
+	border: none;
+	display: inline-block;
+	font-size: 3em;
+	font-family: 'bebas_neueregular';
+
+}
+
+/* --------------- PROJECT/WHITEBOARD --------------- */
+
+#tools {
+	margin-left: 10px;
+	margin-top: 10px;
+	float: left;
+	width: 320px;
+}
+
+#tools form {
+	display: block;
+	width: 320px;
+	height: 140px;
+	background-color: #f45a83;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+#tools form label {
+	padding-top: 20px;
+	margin-left: 10px;
+	display: block;
+}
+
+#tools input {
+	margin-left: 10px;
+	width: 200px;
+	height: 60px;
+	border-radius: 5px;
+	border: none;
+	float: left;
+}
+
+#myProjects {
+	display: block;
+	height: 185px;
+	background-color: #526474;
+	border-radius: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+
+#myProjects h2 {
+	color: white;
+	font-family: 'bebas_neueregular';
+	font-size: 5.8em;
+}
+
+#myProjects h3 {
+	margin-left: 20px;
+	color: white;
+	font-family: 'bebas_neueregular';
+	font-size: 2.8em;	
+}
+
+#myProjects h3:hover {
+	color: #f45a83;
+}
+
+#myProjects h3.active {
+	background-color: #cf486c;
+	width: 200px;
+}
+
+#postIt textarea {
+	width: 200px;
+	height: 60px;
+	max-width: 200px;
+	max-height: 60px;
+	border-radius: 5px;
+	border: none;
+	margin-left: 15px;
+	float: left;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+#tools button {
+	color: white;
+	font-family: 'bebas_neueregular';
+	font-size: 1.8em;
+	background-color: #cf486c;
+	border: none;
+	padding: 20px;
+	margin-right: 8px;
+	border-radius: 5px;
+	float: right;
+}
+
+#tools button:hover {
+	color: #cf486c;
+	background-color: white;
+}
+
+#upload {
+	height: 300px;
+}
+
+#whiteboard {
+	width: 1000px;
+	height: 670px;
+	margin-left: 20px;
+	margin-top: 20px;
+	border: 10px solid #526474;
+	border-radius: 10px;
+	float: left;
+}
+
+#whiteboard h1 {
+	color: #526474;
+	margin-top: 300px;
+	text-align: center;
+	font-family: 'bebas_neueregular';
+	font-size: 5.8em;
+}
+
+#invite input {
+	height: 30px;
 }
 
 

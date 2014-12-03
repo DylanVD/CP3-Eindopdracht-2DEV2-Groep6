@@ -10,7 +10,7 @@ $routes = array(
         'action' => 'index'
     ),
     'register' => array(
-        'controller' => 'Users',
+        'controller' => 'Items',
         'action' => 'register'
     ),
     'upload' => array(
@@ -29,13 +29,13 @@ $routes = array(
         'controller' => 'Items',
         'action' => 'add'
 ),
-    'detail' => array(
+    'project' => array(
         'controller' => 'Items',
-        'action' => 'detail'
+        'action' => 'project'
     ),
-    'review' => array(
+    'new' => array(
         'controller' => 'Items',
-        'action' => 'review'
+        'action' => 'newProject'
     ));
 
 if(empty($_GET['page'])) {

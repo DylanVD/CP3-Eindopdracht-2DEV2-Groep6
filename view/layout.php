@@ -6,12 +6,6 @@
 	<link rel="stylesheet" href="css/screen.css">
 </head>
 <body>
-
-	<header>
-    <nav>
-
-    </nav>
-  </header>
 		<div class="container">
 			<?php if(!empty($_SESSION['info'])): ?><div class="alert alert-success"><?php echo $_SESSION['info'];?></div><?php endif; ?>
 			<?php if(!empty($_SESSION['error'])): ?><div class="alert alert-danger"><?php echo $_SESSION['error'];?></div><?php endif; ?>
@@ -20,5 +14,9 @@
 		</div>
 
 		<script src="js/app.js"></script>
-	</body>
+<footer>
+	<h3>Whiteboard</h3>
+</footer>
+</body>
+
 </html>

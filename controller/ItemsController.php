@@ -13,6 +13,18 @@ class ItemsController extends Controller {
     public function index() {
 
     }
+
+    public function newProject() {
+
+    }
+
+    public function project() {
+
+    }  
+
+    public function register() {
+
+    }    
 }
 
 
