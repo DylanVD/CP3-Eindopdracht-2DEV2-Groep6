@@ -1,7 +1,7 @@
 <?php
 require_once WWW_ROOT . 'controller' . DS . 'Controller.php';
 
-class ItemsController extends Controller {
+class UsersController extends Controller {
 
     function __construct() {
 
@@ -9,4 +9,9 @@ class ItemsController extends Controller {
 
     public function index() {
     }
+
+
+    public function register() {
+
+    }   
 }

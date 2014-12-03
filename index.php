@@ -6,11 +6,11 @@ define('WWW_ROOT', __DIR__ . DS);
 
 $routes = array(
     'home' => array(
-        'controller' => 'Items',
+        'controller' => 'Users',
         'action' => 'index'
     ),
     'register' => array(
-        'controller' => 'Items',
+        'controller' => 'Users',
         'action' => 'register'
     ),
     'upload' => array(

@@ -21,10 +21,7 @@ class ItemsController extends Controller {
     public function project() {
 
     }  
-
-    public function register() {
-
-    }    
+ 
 }
 
 

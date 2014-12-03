@@ -4,6 +4,7 @@
 		<h3>Project 1</h3>
 		<h3 class="active">Project 2</h3>
 		<h3>Project 3</h3>
+		<a href="index.php?page=new"><button>+</button></a>
 	</div>
 	<form id="postIt">
 		    <label for="postit">Nieuwe Post-it</label>
@@ -11,13 +12,13 @@
             <button>Post It!</button>
 	</form>
 	<form id="uploadPicture">
-	<label for="postit">Upload een foto/Video</label>
-            <input id="upload" type="file" name="postit" />
+	<label for="addImageImage">Upload een foto/Video</label>
+            <input id="addImageImage" type="file" name="addImageImage" />
             <button>Voeg in!</button>
 	</form>
 	<form id="invite">
-	<label for="postit">Nodig vrienden uit</label>
-            <input type="postit" name="postit" />
+	<label for="invite">Nodig vrienden uit</label>
+            <input type="postit" name="invite" />
             <button>Invite!</button>
 	</form>
       <ul>
@@ -30,4 +31,9 @@
 
 <section id="whiteboard">
 	<h1>Project 2</h1>
+
+	<div id="postItText">
+		<p class="removePostIt">X</p>
+		<p>feiuhfuiehzfiuhezniufhnezfi^znefbljmz</p>
+	</div>
 </section>
