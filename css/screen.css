@@ -39,7 +39,7 @@ body {
 footer {
 	font-family: 'bebas_neueregular';
 	background-color: #fdfaf4;
-	
+
 	color: #cf486c;
 	position: absolute;
 	right: 100px;
@@ -66,7 +66,7 @@ label {
 	border: 8px solid #cf486c;
 	padding: 5px;
 	border-radius: 10px;
-} 
+}
 
 .login {
 	width: 500px;
@@ -98,7 +98,7 @@ label {
 .login input {
 	width: 375px;
 	height: 30px;
-	padding-left: 10px; 
+	padding-left: 10px;
 	border-radius: 5px;
 	border: none;
 }
@@ -141,7 +141,7 @@ label {
 #register input {
 	width: 300px;
 
-} 
+}
 
 #register ul li {
 	float: left;
@@ -186,7 +186,7 @@ label {
 #newProjectForm input {
 	width: 375px;
 	height: 40px;
-	padding-left: 10px; 
+	padding-left: 10px;
 	border-radius: 5px;
 	border: none;
 	display: inline-block;
@@ -256,7 +256,7 @@ label {
 	margin-left: 20px;
 	color: white;
 	font-family: 'bebas_neueregular';
-	font-size: 2.8em;	
+	font-size: 2.8em;
 	width: 200px;
 }
 
@@ -361,5 +361,9 @@ label {
 	font-size: 1.8em;
 }
 
+#move_image{
+	position: absolute;
+		padding-top: 30px;
+}
 
 

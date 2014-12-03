@@ -1,17 +1,10 @@
 <?php
 class DAO {
-
-	private static $dbHost = "localhost";
-	private static $dbName = "tiender";
-	private static $dbUser = "tiender";
-	private static $dbPass = "tienderpass";
+private static $dbHost = "localhost";
+	private static $dbName = "whiteboard";
+	private static $dbUser = "whiteboard_user";
+	private static $dbPass = "whiteboard_pass";
 	private static $sharedPDO;
-
-	// private static $dbHost = "mysqlstudent";
- //    private static $dbName = "laraluoot7so";
- //    private static $dbUser = "laraluoot7so";
- //    private static $dbPass = "eoxaa8Haiveh";
-	// private static $sharedPDO;
 
 	protected $pdo;
 
