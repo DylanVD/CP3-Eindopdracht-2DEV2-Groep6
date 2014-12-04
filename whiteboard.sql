@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: localhost
--- Genereertijd: 01 dec 2014 om 17:04
+-- Genereertijd: 04 dec 2014 om 20:22
 -- Serverversie: 5.5.33
 -- PHP-versie: 5.5.3
 
@@ -33,7 +33,15 @@ CREATE TABLE `whiteboard_items` (
   `items_video` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `items_extension` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=16 ;
+
+--
+-- Gegevens worden uitgevoerd voor tabel `whiteboard_items`
+--
+
+INSERT INTO `whiteboard_items` (`id`, `items_postit`, `items_image`, `items_video`, `items_extension`) VALUES
+(13, '', 'check', '', 'png'),
+(15, '', 'arrow_up', '', 'png');
 
 -- --------------------------------------------------------
 
@@ -56,9 +64,11 @@ CREATE TABLE `whiteboard_projects` (
 
 CREATE TABLE `whiteboard_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `users_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `users_email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `users_password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `usersname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `lastname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `firstname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
