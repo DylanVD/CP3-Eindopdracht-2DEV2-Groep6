@@ -19,7 +19,7 @@ $routes = array(
     ),
     'login' => array(
         'controller' => 'Users',
-        'action' => 'login'
+        'action' => 'index'
     ),
     'logout' => array(
         'controller' => 'Users',

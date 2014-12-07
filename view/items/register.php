@@ -9,10 +9,10 @@
         		<li class="left">
 		            <label for="username">Gebruikersnaam: </label>
 		            <input type="text" name="username" alue="<?php if(!empty($_POST['username'])) echo $_POST['username'];?>" placeholder="<?php if(!empty($errors['username'])) echo $errors['username']; ?>"/>
-		            <label for="firstName">Voornaam: </label>
-		            <input type="firstName" name="firstName" value="<?php if(!empty($_POST['firstname'])) echo $_POST['firstname'];?>" placeholder="<?php if(!empty($errors['firstname'])) echo $errors['firstname']; ?>" />
-		            <label for="lastName">Achternaam: </label>
-		            <input type="lastName" name="lastName" value="<?php if(!empty($_POST['lastname'])) echo $_POST['lastname'];?>" placeholder="<?php if(!empty($errors['lastname'])) echo $errors['lastname']; ?>"/>     			
+		            <label for="firstname">Voornaam: </label>
+		            <input type="firstname" name="firstname" value="<?php if(!empty($_POST['firstname'])) echo $_POST['firstname'];?>" placeholder="<?php if(!empty($errors['firstname'])) echo $errors['firstname']; ?>" />
+		            <label for="lastname">Achternaam: </label>
+		            <input type="lastname" name="lastname" value="<?php if(!empty($_POST['lastname'])) echo $_POST['lastname'];?>" placeholder="<?php if(!empty($errors['lastname'])) echo $errors['lastname']; ?>"/>     			
         		</li>
         		<li class="left">
 		            <label for="email">E-mail: </label>

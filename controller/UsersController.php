@@ -11,8 +11,38 @@ class UsersController extends Controller {
     }
 
     public function index() {
-    }
+	
+	}
 
+	public function login(){
+	 $errors = array();
+		if(empty($_POST['email'])) {
+			$errors['email'] = 'Please enter your email';
+		}
+		if(empty($_POST['password'])) {
+			$errors['password'] = 'Typ hier je wachtwoord';
+		}
+		if(empty($errors)) 
+		{
+			$existing = $this->userDAO->selectByEmail($_POST['email']);
+			if(!empty($existing)) 
+			{
+				$hasher = new \Phpass\Hash;
+				if ($hasher->checkPassword($_POST['password'], $existing['password'])) 
+				{
+					$_SESSION['user'] = $existing;
+					$this->redirect('index.php?page=project');
+				} else 
+				{
+					$_SESSION['error'] = 'Unknown username / password';
+				}
+			} else 
+			{
+				$_SESSION['error'] = 'Unknown username / password';
+			}
+		} 
+		$this->set('errors', $errors);
+	}
 
     public function register() {
     	$errors = array();
