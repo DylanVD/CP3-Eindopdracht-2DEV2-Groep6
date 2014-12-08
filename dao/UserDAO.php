@@ -32,7 +32,8 @@ class UserDAO extends DAO {
 			require_once 'phpass/Phpass.php';
 			$hasher = new \Phpass\Hash;
 			$passwordHash = $hasher->hashPassword($data['password']);
-			$sql = "INSERT INTO `whiteboard_users` (`email` ,`username`, `firstname`, `lastname`, `password`) VALUES (:email, :username, :firstname, :lastname, :password)";
+			$sql = "INSERT INTO `whiteboard_users` (`email` ,`username`, `firstname`, `lastname`, `password`)
+					VALUES (:email, :username, :firstname, :lastname, :password)";
 			$stmt = $this->pdo->prepare($sql);
 			$stmt->bindValue(':email', $data['email']);
 			$stmt->bindValue(':username', $data['username']);

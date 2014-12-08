@@ -6,6 +6,8 @@
 		<h3>Project 3</h3>
 		<a href="index.php?page=new"><button>+</button></a>
 	</div>
+	<div>
+	</div>
 	<form id="postIt">
 		    <label for="postit">Nieuwe Post-it</label>
             <textarea name="postit"></textarea>
@@ -31,6 +33,14 @@
           <li><a href="index.php?page=logout" class="navbar-link">Logout</a></li>
           <?php } ?>
       </ul>
+
+
+      <div id="loggedIn">
+ 		<?php if(!empty($_SESSION['user'])){ ?>
+          <p>Signed in as <?php echo $_SESSION['user']['username'];?></li>
+          <p><a href="index.php?page=logout" class="navbar-link">Logout</a></li>
+          <?php } ?>
+      </div>
 </section>
 
 <section id="whiteboard">

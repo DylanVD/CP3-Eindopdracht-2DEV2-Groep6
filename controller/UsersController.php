@@ -1,6 +1,7 @@
 <?php
 require_once WWW_ROOT . 'controller' . DS . 'Controller.php';
 require_once WWW_ROOT . 'dao' . DS . 'UserDAO.php';
+require_once 'phpass/Phpass.php';
 
 class UsersController extends Controller {
 
@@ -11,37 +12,46 @@ class UsersController extends Controller {
     }
 
     public function index() {
-	
-	}
-
-	public function login(){
-	 $errors = array();
+    	$errors = array();
+	 if(!empty($_POST)) {
 		if(empty($_POST['email'])) {
 			$errors['email'] = 'Please enter your email';
 		}
 		if(empty($_POST['password'])) {
 			$errors['password'] = 'Typ hier je wachtwoord';
 		}
-		if(empty($errors)) 
+		if(empty($errors))
 		{
 			$existing = $this->userDAO->selectByEmail($_POST['email']);
-			if(!empty($existing)) 
+			if(!empty($existing))
 			{
 				$hasher = new \Phpass\Hash;
-				if ($hasher->checkPassword($_POST['password'], $existing['password'])) 
+				if ($hasher->checkPassword($_POST['password'], $existing['password']))
 				{
 					$_SESSION['user'] = $existing;
 					$this->redirect('index.php?page=project');
-				} else 
+				} else
 				{
 					$_SESSION['error'] = 'Unknown username / password';
 				}
-			} else 
+			} else
 			{
 				$_SESSION['error'] = 'Unknown username / password';
 			}
-		} 
+		}
 		$this->set('errors', $errors);
+		}
+	}
+
+	public function login(){
+
+	}
+
+		public function logout(){
+		unset($_SESSION['user']);
+		$_SESSION['info'] = 'logged out';
+		header('Location: index.php');
+		exit();
 	}
 
     public function register() {
@@ -93,3 +103,5 @@ class UsersController extends Controller {
 		$this->set('errors', $errors);
 	}
 }
+
+
