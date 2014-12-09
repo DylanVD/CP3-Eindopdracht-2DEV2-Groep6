@@ -252,19 +252,19 @@ label {
 	font-size: 5.8em;
 }
 
-#myProjects h3 {
+#myProjects a h3 {
 	margin-left: 20px;
 	color: white;
 	font-family: 'bebas_neueregular';
 	font-size: 2.8em;
-	width: 200px;
+	text-decoration: none;
 }
 
-#myProjects h3:hover {
+#myProjects a h3:hover {
 	color: #f45a83;
 }
 
-#myProjects h3.active {
+#myProjects a h3.active {
 	background-color: #cf486c;
 	width: 200px;
 }
@@ -337,8 +337,21 @@ label {
 }
 
 #loggedIn {
-	margin-top: 30px;
+	margin-top: 0px;
 	height: 100px;
+	font-family: 'bebas_neueregular';
+}
+
+#loggedIn a {
+	font-size: 3em;
+	margin-top: -15px;
+	padding: 10px 30px 10px 30px;
+	border-radius: 10px;
+	background-color: #526474;
+	text-decoration: none;
+	color: white;
+	float: right;
+
 }
 
 #postItText {

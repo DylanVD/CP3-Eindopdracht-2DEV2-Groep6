@@ -14,7 +14,7 @@ $routes = array(
         'action' => 'register'
     ),
     'upload' => array(
-        'controller' => 'Users',
+        'controller' => 'Items',
         'action' => 'index'
     ),
     'login' => array(
@@ -30,11 +30,11 @@ $routes = array(
         'action' => 'add'
 ),
     'project' => array(
-        'controller' => 'Items',
+        'controller' => 'Projects',
         'action' => 'project'
     ),
     'new' => array(
-        'controller' => 'Items',
+        'controller' => 'Projects',
         'action' => 'newProject'
     ));
 
