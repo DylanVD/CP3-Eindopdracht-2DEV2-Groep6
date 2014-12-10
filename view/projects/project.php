@@ -4,8 +4,9 @@
 
 		<?php foreach ($projects as $project){ ?>
 		<a href="index.php?page=project&amp;id=<?php echo $project['id'];?>">
-			<h3><?php echo $project['title'];}?></h3>
+			<h3><?php echo $project['title'];?></h3>
 		</a>
+		<?php } ?>
 				
 		<a href="index.php?page=new"><button>+</button></a>
 	</div>
@@ -43,9 +44,9 @@
 <section id="whiteboard">
 	<h1><?php echo $project['title'];?></h1>
 	<?php
-   foreach($items as $item) {
-        echo '<img id="move_image" src="uploads/'. $item['items_image'].'.'. $item['items_extension'].'">';
-    }
+	   foreach($items as $item) {
+	        echo '<img id="move_image" src="uploads/'. $item['items_image'].'.'. $item['items_extension'].'">';
+	    }
     ?>
 
 	<div id="postItText">
