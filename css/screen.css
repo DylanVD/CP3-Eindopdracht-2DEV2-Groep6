@@ -39,11 +39,12 @@ body {
 footer {
 	font-family: 'bebas_neueregular';
 	background-color: #fdfaf4;
-
+	padding-left: 10px;
+	padding-right: 10px;
 	color: #cf486c;
 	position: absolute;
 	right: 100px;
-	bottom: -18px;
+	bottom: 20px;
 	font-size: 3.4em;
 }
 
@@ -51,6 +52,20 @@ label {
 	color: white;
 	font-family: 'bebas_neueregular';
 	font-size: 3.8em;
+}
+
+
+.error-message {
+	display: block;
+	font-size: 1.2em;
+	font-family: "sans-serif";
+	margin-bottom: -10px;
+}
+
+.error-input {
+	border: 5px solid #414f5c !important;
+	border-collapse: collapse;
+
 }
 
 .home {
@@ -246,18 +261,27 @@ label {
 	margin-bottom: 20px;
 }
 
+#projecten {
+	width: 200px;
+	overflow: scroll;
+	margin-left: 20px;
+	height: 100px;
+}
+
 #myProjects h2 {
 	color: white;
 	font-family: 'bebas_neueregular';
 	font-size: 5.8em;
 }
 
+#myProjects a {
+	text-decoration: none;
+}
+
 #myProjects a h3 {
-	margin-left: 20px;
 	color: white;
 	font-family: 'bebas_neueregular';
 	font-size: 2.8em;
-	text-decoration: none;
 }
 
 #myProjects a h3:hover {
@@ -270,8 +294,8 @@ label {
 }
 
 #myProjects button {
-	background-color: #414f5c !important;
 	margin-top: -70px;
+	background-color: #414f5c !important;
 	font-size: 3em !important;
 }
 
@@ -337,9 +361,15 @@ label {
 }
 
 #loggedIn {
-	margin-top: 0px;
-	height: 100px;
+	height: 40px;
 	font-family: 'bebas_neueregular';
+}
+
+#loggedIn p {
+	color: #414f5c;
+	font-size: 2em;
+	width: 190px;
+	float: left;
 }
 
 #loggedIn a {
@@ -349,9 +379,14 @@ label {
 	border-radius: 10px;
 	background-color: #526474;
 	text-decoration: none;
+	margin-top: 0px;
 	color: white;
-	float: right;
+	float: left;
+}
 
+#loggedIn a:hover {
+	background-color: #fdfaf4;
+	color: #526474;
 }
 
 #postItText {

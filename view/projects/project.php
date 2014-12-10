@@ -1,17 +1,19 @@
 <section id="tools">
 	<div id="myProjects">
 		<h2>Mijn projecten:</h2>
+		<div id="projecten">
+			<?php foreach ($projects as $project){ ?>
+			<a href="index.php?page=project&amp;id=<?php echo $project['id'];?>">
+				<h3><?php echo $project['title'];?></h3>
+			</a>
+			<?php } ?>
+		</div>
 
-		<?php foreach ($projects as $project){ ?>
-		<a href="index.php?page=project&amp;id=<?php echo $project['id'];?>">
-			<h3><?php echo $project['title'];?></h3>
-		</a>
-		<?php } ?>
-				
-		<a href="index.php?page=new"><button>+</button></a>
+		<a  id="createProject" href="index.php?page=new"><button>+</button></a>
+
 	</div>
-	<div>
-	</div>
+
+
 	<form id="postIt">
 		    <label for="postit">Nieuwe Post-it</label>
             <textarea name="postit"></textarea>
@@ -35,8 +37,8 @@
 
       <div id="loggedIn">
  		<?php if(!empty($_SESSION['user'])){ ?>
-          <p>Signed in as <?php echo $_SESSION['user']['username'];?></li>
-          <p><a href="index.php?page=logout" class="navbar-link">Logout</a></li>
+          <p>Signed in as </br><?php echo $_SESSION['user']['username'];?></p>
+          <a href="index.php?page=logout" class="navbar-link">Logout</a>
           <?php } ?>
       </div>
 </section>
@@ -51,6 +53,6 @@
 
 	<div id="postItText">
 		<p class="removePostIt">X</p>
-		<p>feiuhfuiehzfiuhezniufhnezfi^znefbljmz</p>
+		<p>Dit is een testje jaja toch wel</p>
 	</div>
 </section>
