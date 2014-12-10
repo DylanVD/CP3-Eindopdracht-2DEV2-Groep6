@@ -22,7 +22,7 @@ class ProjectDAO extends DAO {
 		$errors = $this->getValidationErrors($data);
 		if(empty($errors)) {
 			$sql = "INSERT INTO `whiteboard_projects` (`user_id`, `title`)
-					VALUES (:user_id, :title)";
+						VALUES (:user_id, :title)";
 			$stmt = $this->pdo->prepare($sql);
 			$stmt->bindValue(':user_id', $data['user_id']);
 			$stmt->bindValue(':title', $data['title']);
@@ -37,6 +37,9 @@ class ProjectDAO extends DAO {
 		if(empty($data['title'])) {
 			$errors['title'] = 'Geef een titel aan je project';
 		}
+		 if(empty($data['user_id'])){
+            $errors['user_id'] = 'Please enter a user_id';
+        }
 		return $errors;
 	}
 

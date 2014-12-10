@@ -5,7 +5,7 @@ require_once WWW_ROOT . 'dao' . DS . 'ItemDAO.php';
 
 class ProjectsController extends Controller {
 
-    private $projectDAO;
+  private $projectDAO;
 	private $itemDAO;
 
     function __construct() {
@@ -75,21 +75,38 @@ class ProjectsController extends Controller {
     }
 
     public function newProject() {
-		
-		if(empty($errors)) {
-                $data = array(
-                    'user_id' => $user_id,
-                    'title' => $title
-                );
-                $newproject = $this->projectDAO->insert($data);
-				if(!empty($newproject)) {
-					$_SESSION['info'] = 'Project toegevoegd';
-					header('Location:index.php?page=project');
-				
-				exit();
-				}		
-    	}	
+    	$item = false;
+    	if(!empty($_POST['action']) && !empty($_SESSION['user'])){
+                $this->_handleMakeProject($item);
+        }
+         $this->set('item',$item);
+        //$this->set('projects',$this->projectDAO->selectByItemId($item['id']));
+			}
+
+ private function _handleMakeProject($item){
+        $errors = array();
+        if(!empty($_POST)){
+            if(empty($errors)){
+                $addItem = array(
+                    'title' => $_POST['title'],
+                    'user_id' => $_SESSION['user']['id']);
+
+                $insertedItem = $this->projectDAO->insert($addItem);
+
+                if(!empty($insertedItem)){
+                    $_SESSION['info']='project added';
+                    header('Location: index.php?page=project');
+                    exit();
+                }else{
+                    $_SESSION['error'] = 'Failed to add';
+                }
+            }else{
+                $_SESSION['error'] = 'Failed to add';
+            }
+            $this->set('errors',$errors);
+        }
     }
+
 }
 
 
