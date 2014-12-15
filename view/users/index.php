@@ -18,6 +18,7 @@
 
 		            <input id="loginButton" type="submit" value="Begin Brainstormen" />
 		        </form>
+		        
 		        <a href="index.php?page=register">Nog geen lid? Registreer hier!</a>
       	<?php
       		} ?>

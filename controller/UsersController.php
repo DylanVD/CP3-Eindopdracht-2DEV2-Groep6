@@ -80,7 +80,7 @@ class UsersController extends Controller {
 			}
 			if($_POST['repeat'] != $_POST['password']) {
 			$errors['repeat'] ='Passwords do not match';
-			}
+			} 
 			if(empty($errors)) {
 				$data = array();
 				$data['email'] = $_POST['email'];
