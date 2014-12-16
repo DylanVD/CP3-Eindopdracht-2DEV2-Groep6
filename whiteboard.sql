@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: localhost
--- Genereertijd: 04 dec 2014 om 20:22
+-- Genereertijd: 16 dec 2014 om 21:29
 -- Serverversie: 5.5.33
 -- PHP-versie: 5.5.3
 
@@ -32,16 +32,18 @@ CREATE TABLE `whiteboard_items` (
   `items_image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `items_video` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `items_extension` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `xpositie` int(11) NOT NULL,
+  `ypositie` int(11) NOT NULL,
+  `project_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=10 ;
 
 --
 -- Gegevens worden uitgevoerd voor tabel `whiteboard_items`
 --
 
-INSERT INTO `whiteboard_items` (`id`, `items_postit`, `items_image`, `items_video`, `items_extension`) VALUES
-(13, '', 'check', '', 'png'),
-(15, '', 'arrow_up', '', 'png');
+INSERT INTO `whiteboard_items` (`id`, `items_postit`, `items_image`, `items_video`, `items_extension`, `xpositie`, `ypositie`, `project_id`) VALUES
+(9, '', 'check', '', 'png', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -51,10 +53,17 @@ INSERT INTO `whiteboard_items` (`id`, `items_postit`, `items_image`, `items_vide
 
 CREATE TABLE `whiteboard_projects` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `users_id` int(11) NOT NULL,
-  `projects_title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=9 ;
+
+--
+-- Gegevens worden uitgevoerd voor tabel `whiteboard_projects`
+--
+
+INSERT INTO `whiteboard_projects` (`id`, `user_id`, `title`) VALUES
+(8, 1, 'blabla');
 
 -- --------------------------------------------------------
 
@@ -64,13 +73,20 @@ CREATE TABLE `whiteboard_projects` (
 
 CREATE TABLE `whiteboard_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `usersname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `lastname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `firstname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+--
+-- Gegevens worden uitgevoerd voor tabel `whiteboard_users`
+--
+
+INSERT INTO `whiteboard_users` (`id`, `username`, `email`, `password`, `lastname`, `firstname`) VALUES
+(1, 'lara', 'laralu1@hotmail.com', '$2y$12$9E6QIkpRrXk4VQLoVyVcUevfCRx8JwRBx2tuUMrHabdsookRV6qv.', 'Lu', 'Lara');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
