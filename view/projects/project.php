@@ -46,10 +46,6 @@
 
 <section id="whiteboard" >
 
-	<?php foreach ($tests as $test) {
-		echo $test['id'];
-	}; ?>
-
 	<h1><?php echo $board['title'];?></h1>
 	<?php
 	   foreach($items as $item) {
