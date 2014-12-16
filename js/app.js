@@ -3,7 +3,7 @@
 	function init(){
 		imageUpload();
 
-for(var i = 0; i < 20; i++){ //LENGTE VAN IMGAGE ARRAY!!!!!!!
+for(var i = 0; i < 20; i++){ //nog aanpassen naar LENGTE VAN ARRAY!!!!!!!
 	var move_image = new Move_image(380,50);
 	document.body.appendChild(move_image.el);
 }

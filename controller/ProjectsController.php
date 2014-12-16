@@ -22,6 +22,8 @@ class ProjectsController extends Controller {
     }
 
     public function project() {
+    	//$this->set('tests',$this->projectDAO->selectByProjectId($_GET['id']));
+
         $board=false;
         if(!empty($_GET['id'])){
             $board = $this->projectDAO->selectById($_GET['id']);
@@ -98,17 +100,11 @@ class ProjectsController extends Controller {
         if(!empty($_POST)) {
             if(empty($_POST['title'])) {
                 $errors['title'] = 'Please enter a title';
-            // } else {
-            //     //check unique email
-            //     $existing = $this->projectDAO->selectByTitle($_POST['title']);
-            //     if(!empty($existing)) {
-            //         $errors['title'] = 'title is already in use';
-            //     }
             }
             if(empty($_POST['title'])) {
                 $errors['title'] = 'Please enter your username';
             }
-        
+
             if(empty($errors)) {
                 $data = array(
                 //$data['moderator_id'] = $_SESSION['user']['id'];
@@ -140,7 +136,7 @@ class ProjectsController extends Controller {
 
             $user = $this->projectDAO->selectById($_SESSION['user']['id']);
             $this->set('user',$user);
-        
+
             if(!empty($_POST)){
 
                 $errors = array();

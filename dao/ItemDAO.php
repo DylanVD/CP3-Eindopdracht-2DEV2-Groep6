@@ -43,4 +43,30 @@ class ItemDAO extends DAO {
 		return $errors;
 	}
 
+	public function insertVideo($data) {
+		$errors = $this->getValidationErrors($data);
+		if(empty($errors)) {
+			$sql = "INSERT INTO `whiteboard_items` (`items_video`, `items_extension`) VALUES (:items_video, :items_extension)";
+			$stmt = $this->pdo->prepare($sql);
+			$stmt->bindValue(':items_video', $data['items_video']);
+			$stmt->bindValue(':items_extension', $data['items_extension']);
+			if($stmt->execute()) {
+				$insertedId = $this->pdo->lastInsertId();
+				return $this->selectById($insertedId);
+			}
+		}
+		return false;
+	}
+
+	public function getValidationErrorsVideo($data) {
+		$errors = array();
+		if(empty($data['items_video'])) {
+			$errors['items_video'] = 'Please enter the video';
+		}
+		if(empty($data['items_extension'])) {
+			$errors['items_extension'] = 'Please enter the extension of the file';
+		}
+		return $errors;
+	}
+
 }

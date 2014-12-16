@@ -19,7 +19,7 @@ class ProjectDAO extends DAO {
 	}
 
 	public function selectByProjectId($id){
-        $sql ="SELECT * FROM `whiteboard_projects` INNER JOIN `whiteboard_items` ON whiteboard_items.id = to_boeken.id WHERE to_boeken.id = :id";
+        $sql="SELECT * FROM `whiteboard_projects` INNER JOIN `whiteboard_items` ON whiteboard_items.project_id = whiteboard_projects.id";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(':id', $id);
         $stmt->execute();

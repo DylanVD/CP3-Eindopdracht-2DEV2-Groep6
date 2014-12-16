@@ -27,7 +27,6 @@ class ItemsController extends Controller {
         if(!empty($_FILES['image'])){
             if(!empty($_FILES['image']['error'])){
                 $errors['image'] = 'Something went wrong';
-
             }
             if(empty($errors['image'])){
                 $size = getImageSize($_FILES['image']['tmp_name']);
@@ -68,6 +67,46 @@ class ItemsController extends Controller {
             $_SESSION['error'] = 'Failed to add';
         }
         $this->set('errors',$errors);
+
+        ////////////////////
+
+			// $videos = $this->itemDAO->selectAll();
+   //    $this->set('videos',$videos);
+
+   //      if(!empty($_POST)){
+   //  	 	if(empty($_POST['video'])){
+   //  	 		if(!empty($_FILES['video']['error'])){
+   //  	 			$errors['video'] = 'Something went wrong, please try again';
+   //  	 			if(empty($errors['video'])){
+   //  	 				$sourceFile = $_FILES['video']['tmp_name'];
+   //  	 				$destFile = WWW_ROOT. 'uploads' . DS . $_FILES['video']['name'];
+
+   //              $dotPos = strrpos($_FILES['image']['name'],'.');
+   //              $name = substr($_FILES['image']['name'],0,$dotPos);
+   //              $extension = substr($_FILES['image']['name'],$dotPos+ 1);
+
+   //              $data = array(
+   //                  'items_video' => $name,
+   //                  'items_extension' => $extension
+   //              );
+   //              $insertedVideo = $this->itemDAO->insert($data);
+   //            }
+   //          }
+
+   //  	 			if(!empty($insertedVideo)){
+	  //   	 				$_SESSION['info'] = 'added';
+   //  	 				header('Location: index.php?page=project');
+   //  	 				exit();
+   //  	 			}else{
+   //  	 				$_SESSION['error'] = 'failed';
+   //  	 			}
+   //  	 		}else{
+   //  	 				$_SESSION['error'] = 'failed';
+   //  	 		}
+   //  	 	}
+   //  	 	$this->set('errors',$errors);
+
+   //  	 }
 
     }
 

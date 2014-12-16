@@ -12,6 +12,10 @@ class UsersController extends Controller {
     }
 
     public function index() {
+
+	if(!empty($_SESSION['user'])){
+		header('Location: index.php?page=project');
+	}
     	$errors = array();
 	 if(!empty($_POST)) {
 		if(empty($_POST['email'])) {
@@ -55,6 +59,10 @@ class UsersController extends Controller {
 	}
 
     public function register() {
+
+	if(!empty($_SESSION['user'])){
+		header('Location: index.php?page=project');
+	}
     	$errors = array();
 		if(!empty($_POST)) {
 			if(empty($_POST['email'])) {
@@ -80,7 +88,7 @@ class UsersController extends Controller {
 			}
 			if($_POST['repeat'] != $_POST['password']) {
 			$errors['repeat'] ='Passwords do not match';
-			} 
+			}
 			if(empty($errors)) {
 				$data = array();
 				$data['email'] = $_POST['email'];
@@ -91,7 +99,7 @@ class UsersController extends Controller {
 				$registration = $this->userDAO->insert($data);
 				if(!empty($registration)) {
 					$_SESSION['info'] = 'Registration successful';
-					header('Location:index.php');
+					header('Location:index.php?page=project');
 					exit();
 				} else {
 					$_SESSION['error'] = 'Registration failed';
